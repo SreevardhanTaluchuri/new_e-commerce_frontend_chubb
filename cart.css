@@ -1,0 +1,175 @@
+.cartWrapper .headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.cartWrapper .headerWrapper .headerTitleWrapper {
+  cursor: pointer;
+}
+.cartWrapper .headerWrapper .headerTitleWrapper .headerTitle {
+  text-transform: lowercase;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 28px;
+  color: rgb(84, 178, 38);
+  font-family: Poppins;
+  margin: 0 0 0 20px;
+}
+.cartWrapper .cartContainer .cartTitle {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 32px;
+  color: rgb(31, 31, 31);
+  font-family: Poppins;
+  margin: 50px 0 0 40px;
+}
+.cartWrapper .cartContainer .cartInfoContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper {
+  margin: 20px 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .noCartText {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 32px;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer {
+  width: 680px;
+  height: 250px;
+  border: 1px solid rgb(232, 232, 232);
+  box-shadow: rgba(0, 0, 0, 0.185) 2px 2px 8px;
+  margin: 5px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer .productImg {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer .cardContentContainer {
+  margin: 0 auto;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer .cardContentContainer .productTitle {
+  cursor: pointer;
+  font-size: 32Spx;
+  font-family: "Poppins";
+  font-weight: 600;
+  width: 300px;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer .cardContentContainer .productTitle:hover {
+  text-decoration: underline;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer .cardContentContainer .priceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer .cardContentContainer .priceContainer .productCartButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+  height: 30px;
+  background-color: rgb(49, 134, 22);
+  border-radius: 10px;
+  border: 1px solid rgb(49, 134, 22);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: normal;
+  color: white;
+  font-family: "Poppins";
+}
+.cartWrapper .cartContainer .cartInfoContainer .productsWrapper .productCardContainer .cardContentContainer .priceContainer .productCartButton button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 24px;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper {
+  max-width: 430px;
+  width: 60%;
+  border-radius: 16px;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  margin: 0px auto;
+  border: 1px solid rgb(232, 232, 232);
+  box-shadow: rgba(0, 0, 0, 0.185) 2px 2px 8px;
+  padding: 0 20px;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .cartInfoTitle {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 12px;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .billInfoContainer {
+  max-width: 400px;
+  width: 100%;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .billInfoContainer .productBillContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .billInfoContainer .productBillContainer .productBillTitle {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: normal;
+  color: rgb(102, 102, 102);
+  font-family: Poppins;
+  max-width: 250px;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .billInfoContainer .productBillContainer .productBillAmount {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: normal;
+  color: rgb(102, 102, 102);
+  font-family: Poppins;
+  max-width: 250px;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .billInfoContainer .totalCartAmountContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .billInfoContainer .totalCartAmountContainer .billTotalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+}
+.cartWrapper .cartContainer .cartInfoContainer .cartInfoWrapper .billInfoContainer .totalCartAmountContainer .billTotalAmount {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+}/*# sourceMappingURL=cart.css.map */

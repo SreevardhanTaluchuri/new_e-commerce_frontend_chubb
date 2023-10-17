@@ -1,0 +1,152 @@
+@mixin flex($alignItems , $justifyContent){
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin font($size,$weight,$spacing,$lineHeight,$color,$family){
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+    line-height: $lineHeight;
+    color: $color;
+    font-family: $family;
+}
+
+@mixin button($width,$height,$bckColor,$borderRadius,$border,$textAlign){
+    width: $width;
+    height: $height;
+    background-color: $bckColor;
+    border-radius: $borderRadius;
+    border: $border;
+    text-align: $textAlign;
+}
+
+.cartWrapper{
+    .headerWrapper{
+        @include flex(center,space-between );
+        margin : 20px 0 0 0;
+        .headerTitleWrapper{
+            .headerTitle{
+                text-transform: lowercase;
+                @include font(40px,600,2px,28px,rgb(84, 178, 38),Poppins);
+                margin : 0 0 0 20px;
+            }
+            cursor: pointer;
+        }
+    }
+    .cartContainer{
+        .cartTitle{
+            @include font(24px,700 ,normal ,32px , rgb(31,31,31),Poppins);
+            margin : 50px 0 0 40px;
+        }
+        .cartInfoContainer{
+            @include flex(flex-start,space-between);
+
+            .productsWrapper{
+                margin : 20px 0 0 30px;
+                @include flex(center , center);
+                flex-direction: column;
+
+                .noCartText{
+                    @include font(18px,600 ,normal ,32px , rgb(0, 0, 0),Poppins);
+                }
+                    .productCardContainer{
+                        width: 680px;
+                        height: 250px;
+                        border: 1px solid rgb(232, 232, 232);
+                        box-shadow: rgba(0, 0, 0, 0.185) 2px 2px 8px;
+                        margin : 5px;
+                        border-radius : 8px;
+                        text-align: center;
+                        @include flex(center , center);
+                        // flex-direction: column;
+                        .productImg{
+                            margin : 0 auto;
+                            width: 150px;
+                            height: 150px;
+                        }
+                        
+                        .cardContentContainer{
+                            margin: 0 auto;
+                            .productTitle{
+                                cursor: pointer;
+                                font-size: 32Spx;
+                                font-family: "Poppins";
+                                font-weight: 600;
+                                width: 300px;
+            
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+            
+                            .priceContainer{
+                                @include flex(center,space-around);
+                                width : 300px;
+                                .priceInfo{
+                                    
+                                }
+            
+                                .productCartButton{
+                                    @include flex(center,space-between);
+                                    @include button(80px,30px,rgb(49, 134, 22) ,10px,1px solid rgb(49, 134, 22),center);
+                                    @include font(16px,600,normal,normal,white,"Poppins");
+                                    
+                                    button{
+                                        cursor: pointer;
+                                        background-color: transparent;
+                                        border: 0;
+                                        color: white;
+                                        font-size: 24px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            
+            .cartInfoWrapper{
+                max-width: 430px;
+                width: 60%;
+                border-radius: 16px;
+                max-height: max-content;
+                margin : 0px auto;
+                border: 1px solid rgb(232, 232, 232);
+                box-shadow: rgba(0, 0, 0, 0.185) 2px 2px 8px;
+                padding : 0 20px;
+                .cartInfoTitle{
+                    @include font(24px,700,0px,12px,rgb(0,0,0),Poppins);
+
+                }
+
+                .billInfoContainer{
+                    max-width: 400px;
+                        width: 100%;
+                    .productBillContainer{
+                        @include flex(flex-start,space-between);
+                        .productBillTitle{
+                            @include font(18px,600,normal,normal,rgb(102, 102, 102),Poppins);
+                            max-width: 250px;
+                        }
+
+                        .productBillAmount{
+                            @include font(18px,600,normal,normal,rgb(102, 102, 102),Poppins);
+                            max-width: 250px;
+                        }
+                    }
+                    .totalCartAmountContainer{
+                        @include flex(center,space-between);
+
+                        .billTotalTitle{
+                            @include font(18px,700,0,normal,rgb(0,0,0),Poppins);
+                        }
+                        .billTotalAmount{
+                            @include font(18px,700,0,normal,rgb(0,0,0),Poppins);
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }

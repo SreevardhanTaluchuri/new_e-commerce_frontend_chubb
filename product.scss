@@ -1,0 +1,124 @@
+@mixin flex($alignItems , $justifyContent){
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin font($size,$weight,$spacing,$lineHeight,$color,$family){
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+    line-height: $lineHeight;
+    color: $color;
+    font-family: $family;
+}
+
+@mixin button($width,$height,$bckColor,$borderRadius,$border,$textAlign){
+    width: $width;
+    height: $height;
+    background-color: $bckColor;
+    border-radius: $borderRadius;
+    border: $border;
+    text-align: $textAlign;
+}
+
+*{
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.productWrapper{
+    height: 88vh;
+    .headerWrapper{
+        @include flex(center,space-between );
+        margin : 20px 0 0 0;
+        .headerTitleWrapper{
+            cursor: pointer;
+            .headerTitle{
+                text-transform: lowercase;
+                @include font(40px,600,2px,28px,rgb(84, 178, 38),"Poppins");
+                margin : 0 0 0 20px;
+            }
+        }
+
+        .cartButtonWrapper{
+            .cartButton{
+                @include button(122px,52px,rgb(12, 131, 31),8px,0px,center);
+                @include font(18px,500,1px,normal,white,"Poppins");
+                padding : 10px;
+                @include flex(center,space-between);
+                margin : 0 20px 0 0;
+                cursor: pointer;
+            }
+        }
+    }
+    .productContainer{
+        @include flex(center,space-between);
+        height: 100%;
+        .productImgContainer{
+            @include flex(center,center);
+            flex-basis: 40%;
+            cursor: pointer;
+            .productImg{
+                width : 300px;
+                height : 400px;
+            }
+        }
+
+        .productInfoWrapper{
+            flex-basis: 55%;
+            text-align: center;
+            height: 300px;
+            .productInfoContainer{
+                max-width : 500px;
+                width : 100%;
+                max-height : 500px;
+                height : 100%;
+                box-shadow: rgba(0, 0, 0, 0.185) 2px 2px 8px;
+                @include flex(center,space-between);
+                flex-direction: column;
+                border: 1px solid rgb(232, 232, 232);
+                .productTitleContainer{
+                    margin : 40px 0 0 0;
+                    max-width: 450px;
+                    @include font(20px,700,normal,32px,rgb(0, 0, 0),"Poppins");                    
+                }
+                .ratingContainer{
+                    // width: 65px;
+                    overflow: hidden;
+                    .rating{
+                        width: 150px;
+                    }
+                }
+                .productCategoryContainer{
+                    text-align: start;
+                    width : 80%;
+                    .productCategory{
+                        @include font(18px,400,normal,normal,rgb(0,0,0),"Poppins");
+                        .category{
+                            @include font(18px,500,normal,normal,rgb(12, 131, 31),"Poppins");
+                        }
+                    }
+                }
+
+                .productDescriptionContainer{
+                    width : 90%;
+                    margin : 0 0 30px 0;
+                    .productDescription{
+                        @include font(14px,500,normal,normal,rgb(0,0,0),"Poppins");
+                    }
+                }
+
+                .addToCartButtonContainer{
+                    .addToCart{
+                        cursor: pointer;
+                        margin : 20px 0 40px 0;
+                        @include button(300px,40px ,transparent ,8px ,1px solid rgb(12, 131, 31) ,center);
+                        @include font(18px,500,1px,normal,black,"Poppins");
+                    }
+                }
+                
+            }
+        }
+    }
+}

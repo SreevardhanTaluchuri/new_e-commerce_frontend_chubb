@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />                   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>E-Commerce</title>
+</head>
+<body>
+    <div class="productWrapper">
+            <div class="headerWrapper">
+                <div class="headerTitleWrapper" onclick="navigate_to_home_page(event)">
+                    <h1 class="headerTitle">E-Commerce</h1>
+                </div>
+                <div class="cartButtonWrapper">
+                    <button class="cartButton" id="cartBtn" onclick="navigateToCart(event)">
+                        <i class="fa-solid fa-cart-shopping"></i><p>My cart</p>
+                    </button>
+                </div>
+            </div>
+        <div class="productContainer">
+            <div class="productImgContainer">
+                <img class="productImg" src="" alt="Product Img" id="image"/>
+            </div>
+            <div class="productInfoWrapper">
+                <div class="productInfoContainer">
+                    <div class="productTitleContainer">
+                        <p class="productTitle" id="title"></p>
+                    </div>
+                    <div class="ratingContainer" id="rating">
+                        <div class="rating">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                    <div class="productCategoryContainer">
+                        <p class="productCategory" id="">
+                            Category: <span class="category" id="category"></span>
+                        </p>
+                    </div>
+                    <div class="productDescriptionContainer">
+                        <p class="productDescription" id="description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

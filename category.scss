@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@mixin flex($alignItems , $justifyContent){
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin font($size,$weight,$spacing,$lineHeight,$color,$family){
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+    line-height: $lineHeight;
+    color: $color;
+    font-family: $family;
+}
+
+@mixin button($width,$height,$bckColor,$borderRadius,$border,$textAlign){
+    width: $width;
+    height: $height;
+    background-color: $bckColor;
+    border-radius: $borderRadius;
+    border: $border;
+    text-align: $textAlign;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.categoryWrapper{
+    .headerWrapper{
+        @include flex(center,space-between );
+        margin : 20px 0 0 0;
+        .headerTitleWrapper{
+            cursor: pointer;
+            .headerTitle{
+                text-transform: lowercase;
+                @include font(40px,600,2px,28px,rgb(84, 178, 38),Poppins);
+                margin : 0 0 0 20px;
+                cursor: pointer;
+            }
+        }
+
+        .cartButtonWrapper{
+            .cartButton{
+                @include button(122px,52px,rgb(12, 131, 31),8px,0px,center);
+                @include font(18px,500,1px,normal,white,Poppins);
+                padding : 10px;
+                @include flex(center,space-between);
+                margin : 0 20px 0 0;
+                cursor: pointer;
+            }
+        }
+    }
+    .categoryProductsWrapper{
+        margin : 20px 0 0 30px;
+        .categoryTitle{
+            @include font(24px,600,normal,normal,#333,Poppins);
+        }
+        .categoryProductsContainer{
+            @include flex(center,space-around);
+            flex-wrap: wrap;
+                .productCardContainer{
+                    width: 180px;
+                    height: 250px;
+                    cursor: pointer;
+                    border: 1px solid rgb(232, 232, 232);
+                    box-shadow: rgba(0, 0, 0, 0.185) 2px 2px 8px;
+                    margin : 35px;
+                    border-radius : 8px;
+                    text-align: center;
+                    @include flex(center , space-between);
+                    flex-direction: column;
+                    .productImg{
+                        margin : 10px 0;
+                        width: 70px;
+                        height: 70px;
+                    }
+    
+                    .productTitle{
+                        font-size: 10px;
+                        font-family: "Poppins";
+                        font-weight: 600;
+                        width: 150px;
+                    }
+    
+                    .priceContainer{
+                        @include flex(center,space-between);
+                        width : 160px;
+                        margin : 0 0 10px 0;
+                        .priceInfo{
+                            
+                        }
+    
+                        .productCartButton{
+                            @include button(80px,30px,transparent,10px,1px solid rgb(49, 134, 22),center);
+                            @include font(16px,600,normal,normal,rgb(49, 134, 22),"Poppins");
+                            cursor: pointer;
+                        }
+                        .productCartBtn{
+                            @include flex(center,space-between);
+                            @include button(80px,30px,rgb(49, 134, 22) ,10px,1px solid rgb(49, 134, 22),center);
+                            @include font(16px,600,normal,normal,white,"Poppins");
+                            
+                            button{
+                                cursor: pointer;
+                                background-color: transparent;
+                                border: 0;
+                                color: white;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}
